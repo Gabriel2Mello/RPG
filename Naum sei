@@ -1,0 +1,37 @@
+cadeia teclaPres //pressione uma tecla para continuar
+inteiro opcao
+const cadeia RAVINA_ESCURA="A Estrada Velha percorre a parte leste de uma ravina estreita. Quando se aproxima o máximo da fenda, é possível enxergar diversos pilares quebrados saindo da terra no local onde a ravina se abre em algo semelhante a um precipício profundo e estreito. Dois pares de pilares estão de pé, mas a maioria está inclinada em direção ao buraco. Vários outros estão quebrados e muitos, aparentemente, caíram nas profundezas escuras. Alguns pilares semelhantes podem ser vistos do lado oposto da fenda.\n\n")
+
+escreva ("========== INTRUDUÇÃO ==========\n")
+escreva ("Tudo acontece aqui - horrores em meio às noites, campanhas de um ano perdido. masmorras perturbadas e iluminados bosques, ecoando nessas praias de chão clareado. Mortes em êxtase de cavaleiros errantes - E ainda assim, o vento traz frescor revigorado! - Artur Rimbaud\n\n")
+escreva ("Pressione qualquer tecla para continuar...")
+leia(teclaPres)
+  se{
+  teclaPres!=§
+  }
+  escreva (RAVINA_ESCURA)
+  escreva ("1)Ações\n")
+  escreva ("2)Opções\n\n")
+  escreva("Escolha uma opção: ")
+  leia(opcao)
+  limpa()
+    escolha(opcao){
+    caso 1:
+    escreva (RAVINA_ESCURA)
+    escreva ("1)Avançar\n")
+    escreva ("2)Recuar\n")
+    escreva ("3)Atacar\n")
+    caso 2:
+    escreva (RAVINA_ESCURA)
+    escreva ("1)Voltar para a cidade")
+    //add mais opções depois
+    escreva ("\n\nPressione qualquer tecla para voltar...")
+    leia(teclaPres)
+    
+    }
+escreva ("Escolha uma opção: ")
+    escreva ("2)
+    escreva("A ravina se estende por diversos quilômetros em ambas as direções; sua profundidade e largura são de evidentemente grandes.\n\n")
+    escreva ("Pressione qualquer tecla para voltar...")
+    leia(teclaPres)
+    escreva ("Escolha uma opção: ")
