@@ -1,0 +1,71 @@
+cadeia ravina_escura_perto="Os pilares estão gastos e quebrados e na maioria deles há inscrições no alfabeto Anão/Goblin.\n Ao se aproximar da ravina imediatamente se percebe uma corda com nós resistentes, amarrada a um dos pilares inclinados, que continua seguindo escuridão adentro. \n\n"
+inteiro valor_atributo_teste
+inteiro dano_dado 
+cadeia qualquer_coisa //valor descartavel
+inteiro descida=1
+ se (opcao==3) { //avançar
+    limpa()
+    escreva (RAVINA_ESCURA)
+    escreva (ravina_escura_perto)
+    escreva ("1)Voltar\n")
+    escreva ("2)Tenho conhecimento do idioma anão/goblin\n")
+    escreva ("3)Investigar mais")
+    escreva ("4)Descer ravina\n")
+    escreva ("\nEscolha uma opção: ")
+    leia(opcao1)
+    }
+      se (opcao1==1){
+        //continuar esse voltar
+      } senao { se (opcao1==2) { 
+          limpa()
+          escreva (RAVINA_ESCURA)
+          escreva (ravina_escura_perto)
+          escreva ("As inscrições são avisos de precaução e ameaças contra invasores em potencial.\n\n")
+          escreva (Precione <Enter> para voltar...)
+          leia(TeclaPres)
+          ravina_escura_perto="Os pilares estão gastos e quebrados e na maioria deles há inscrições com avisos de precaução e ameaças contra invasores em potencial.\n Ao se aproximar da ravina imediatamente se percebe uma corda com nós resistentes, amarrada a um dos pilares inclinados, que continua seguindo escuridão adentro. \n\n"
+         } senao { se (opcao1==3) { //fazer um teste de Inteligência (Investigação) ou Sabedoria (Percepção) CD 13
+            limpa()
+            escreva (RAVINA_ESCURA)
+            escreva ("ravina_escura")
+            escreva ("Digite o valor do seu atributo para o teste(Inteligência/Investigação ou Sabedoria/Percepção): ")
+            leia (valor_atributo_teste)
+            //rolar os dados com o algo ritmo do lucas, o viadão
+              se (valor_atributo_teste>=13){
+                limpa()
+                escreva ("==========VOCÊ OBTEVE SUCESSO NO SEU TESTE==========\n")
+                escreva ("O teste revelou que a área próxima e ao redor dos pilares contém restos de incontáveis fogueiras – algumas delas são recentes(quase um mês atrás). No entanto, alguém fez algum esforço para esconder a evidência dos acampamentos da pesquisa casual.\n\n")
+                escreva ("Precione <Enter> para voltar...")
+                leia (TeclaPres)
+              }
+                senao {
+                  lima()
+                  escreva("==========VOCÊ FALHOU NO TESTE==========\n\n")
+                  escreva("Precione <Enter para voltar...")
+                  leia(TeclaPres)
+                }
+                  } senao {
+                  limpa()
+                  escreva ("Digite o valor do seu atributo para o teste de Força(Atletismo): ")
+                  leia("valor_atributo_teste")
+                  //rolar os dados com o algo ritmo do lucas, o viadão
+                  se (valor_atributo_teste>=10){
+                  //2d6 de dano
+                  escreva("==========VOCÊ FALHOU NO TESTE==========\n")
+                  escreva("VOCÊ CAIU 7,5 METROS ATÉ O PARAPEITO E RECEBEU ", dano_dado, " DE DANO")
+                  escreva("\n\nPrecione <Enter> para continuar...")
+                  leia(qualquer_coisa)
+                  TeclaPres=§
+                  }
+                  senao {
+                  limpa()
+                  escreva ("==========VOCÊ OBTEVE SUCESSO NO SEU TESTE==========\n")
+                  escreva ("VOCÊ ESTÁ DESCENDO DO PARAPEITO\n")
+                  escreva ("Profundidade atingida: ", descida, "metros")
+                  escreva ("Precione <Enter> para continuar descendo")
+                  leia () //enquanto
+                  }
+                }
+                
+                }
+}
